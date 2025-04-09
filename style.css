@@ -1,0 +1,164 @@
+/* Definições Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Corpo da Página */
+body {
+    background: linear-gradient(to bottom, #FF6F61, #FFD700);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: white;
+    font-size: 16px;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+/* Caixa principal */
+.container {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Logo */
+.logo {
+    max-width: 100%; /* Limita a largura da imagem a 100% do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-bottom: 20px;
+}
+
+/* Título */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #FFD700;
+}
+
+/* Estilo do formulário */
+label {
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Campo de pesquisa */
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #FFD700;
+    border-radius: 8px;
+    background: #f5f5f5;
+    color: #333;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-align: center; /* Alinha o texto no centro do campo */
+}
+
+input[type="text"]:focus {
+    border-color: #FF6F61;
+    background: #fff;
+    outline: none;
+}
+
+/* Botão */
+button {
+    background-color: #FF6F61;
+    color: white;
+    font-size: 1.2rem;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #E65C50;
+}
+
+/* Exibição do resultado (Agora mais visível e enfatizado) */
+#resultado {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #fff;
+    background-color: #FF6F61;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efeito ao passar o mouse sobre o resultado */
+#resultado:hover {
+    transform: scale(1.05);
+}
+
+/* Responsividade para dispositivos móveis */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    input[type="text"] {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+
+    /* Ajusta o resultado em telas menores */
+    #resultado {
+        font-size: 1.3rem;
+        padding: 12px;
+    }
+
+    /* Ajusta o logo para telas menores */
+    .logo {
+        max-width: 80%; /* Reduz o tamanho máximo em telas menores */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    input[type="text"], button {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    #resultado {
+        font-size: 1.2rem;
+        padding: 12px;
+    }
+
+    /* Ajusta o logo para telas pequenas */
+    .logo {
+        max-width: 70%; /* Reduz ainda mais o logo para telas muito pequenas */
+    }
+}
